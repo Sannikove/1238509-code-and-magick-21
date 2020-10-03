@@ -4,9 +4,11 @@ const WIZARD_NAMES = [`Иван`, `Хуан Себастьян`, `Мария`, `
 
 const WIZARD_SURNAMES = [`да Марья`, `Верон`, `Мирабелла`, `Вальц`, `Онопко`, `Топольницкая`, `Нионго`, `Ирвинг`];
 
-const COAT_COLOR = [`rgb(101, 137, 164)`, `rgb(241, 43, 107)`, `rgb(146, 100, 161)`, `rgb(56, 159, 117)`, `rgb(215, 210, 55)`, `rgb(0, 0, 0)]`];
+const COAT_COLORS = [`rgb(101, 137, 164)`, `rgb(241, 43, 107)`, `rgb(146, 100, 161)`, `rgb(56, 159, 117)`, `rgb(215, 210, 55)`, `rgb(0, 0, 0)]`];
 
 const EYES_COLOR = [`black`, `red`, `blue`, `yellow`, `green`];
+
+const WIZARDS_AMOUNT = 4;
 
 const userDialog = document.querySelector(`.setup`);
 userDialog.classList.remove(`hidden`);
@@ -24,10 +26,10 @@ const randomArrayElement = function (arr) {
 
 const wizards = [];
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < WIZARDS_AMOUNT; i++) {
   wizards[i] = {
     name: randomArrayElement(WIZARD_NAMES) + ` ` + randomArrayElement(WIZARD_SURNAMES),
-    coatColor: randomArrayElement(COAT_COLOR),
+    coatColor: randomArrayElement(COAT_COLORS),
     eyesColor: randomArrayElement(EYES_COLOR)
   };
 }
